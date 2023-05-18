@@ -11,11 +11,6 @@ class Splash_screen extends StatefulWidget {
 class _Splash_screenState extends State<Splash_screen> {
 
   bool? status;
-  @override
-  void initState() {
-    super.initState();
-    Getdata();
-  }
 
   Future<void> Getdata() async {
     SharedPref shr =SharedPref();
@@ -55,10 +50,13 @@ class _Splash_screenState extends State<Splash_screen> {
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
-            child: Text(
-          "darshan",
-          style: TextStyle(fontSize: 30, color: Colors.amber),
-        )),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset("assets/image/d.png"),
+
+              ],
+            )),
       ),
     );
   }

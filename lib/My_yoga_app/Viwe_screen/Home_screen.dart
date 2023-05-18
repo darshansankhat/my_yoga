@@ -86,9 +86,9 @@ class _Home_screenState extends State<Home_screen> {
 
                 shr.userLogout();
 
-                // Navigator.pushReplacementNamed(context, "/");
+                Navigator.pushReplacementNamed(context, "/");
 
-                exit(0);
+
               },
               child: Text("Logout"),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),

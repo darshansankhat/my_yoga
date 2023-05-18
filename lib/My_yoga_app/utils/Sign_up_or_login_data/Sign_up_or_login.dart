@@ -22,12 +22,6 @@ class SharedPref{
     return {"mobil":mobil,"email":email,"pass":pass,"login":login};
   }
 
-  Future<void> userLogout()
-  async {
-    SharedPreferences shr = await SharedPreferences.getInstance();
-    shr.clear();
-  }
-
   Future<void> introDone()
   async {
     SharedPreferences shr = await SharedPreferences.getInstance();
@@ -41,4 +35,11 @@ class SharedPref{
     bool? done=shr.getBool("done");
     return done;
   }
+
+  Future<void> userLogout()
+  async {
+    SharedPreferences shr = await SharedPreferences.getInstance();
+    shr.clear();
+  }
+
 }
